@@ -36,13 +36,3 @@ def mergeSort(lijst):
             lijst[k] = rechts[j]
             j += 1
             k += 1
-
-'''
-Main code
-'''
-lijst = [10, 7, 8, 9, 1, 5]
-mergeSort(lijst)
-
-print("De gesorteerde lijst is:")
-for i in range(len(lijst)):
-    print(lijst[i])

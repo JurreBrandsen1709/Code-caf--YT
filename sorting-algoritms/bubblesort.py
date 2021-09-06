@@ -14,14 +14,3 @@ def bubbleSort(lijst):
             # Als je een cijfer tegenkomt dat groter is dan je zelf bent, wissel dan van positie.
             if lijst[j] > lijst[j + 1]:
                 lijst[j], lijst[j + 1] = lijst[j + 1], lijst[j]
-
-'''
-Main code
-'''
-
-lijst = [10, 7, 8, 9, 1, 5]
-bubbleSort(lijst)
-
-print("De gesorteerde lijst is:")
-for i in range(len(lijst)):
-    print(lijst[i])

@@ -16,14 +16,3 @@ def insertionSort(lijst):
             lijst[j + 1] = lijst[j]
             j -= 1
         lijst[j + 1] = cursor
-
-
-'''
-Main code
-'''
-lijst = [10, 7, 8, 9, 1, 5]
-insertionSort(lijst)
-
-print("De gesorteerde lijst is:")
-for i in range(len(lijst)):
-    print(lijst[i])

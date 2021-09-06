@@ -30,14 +30,3 @@ def quickSort(lijst, start_index=0, eind_index=0):
         # Sorteer de elementen voor en na de partitie apart
         quickSort(lijst, start_index, partitie_index - 1)
         quickSort(lijst, partitie_index + 1, eind_index)
-
-'''
-main code
-'''
-lijst = [10, 7, 8, 9, 1, 5]
-eind_index = len(lijst)
-quickSort(lijst, eind_index=len(lijst)-1)
-
-print("De gesorteerde lijst is:")
-for i in range(len(lijst)):
-    print(lijst[i])
