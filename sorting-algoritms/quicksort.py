@@ -2,8 +2,12 @@
 Partitie algoritme (QuickSort helper)
 '''
 def partitie(lijst, start_index, eind_index):
-    cursor = start_index - 1
+
+    # De gekozen partitie is altijd het meest rechtse element in de array
     laatste_element = lijst[eind_index]
+
+    # De swapping index
+    cursor = start_index - 1
 
     for huidig in range(start_index, eind_index):
 
@@ -30,3 +34,4 @@ def quickSort(lijst, start_index=0, eind_index=0):
         # Sorteer de elementen voor en na de partitie apart
         quickSort(lijst, start_index, partitie_index - 1)
         quickSort(lijst, partitie_index + 1, eind_index)
+
