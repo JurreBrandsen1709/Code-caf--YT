@@ -1,13 +1,16 @@
+import sys
+sys.setrecursionlimit(15000)
+
 '''
 Partitie algoritme (QuickSort helper)
 '''
 def partitie(lijst, start_index, eind_index):
 
-    # De gekozen partitie is altijd het meest rechtse element in de array
-    laatste_element = lijst[eind_index]
-
     # De swapping index
     cursor = start_index - 1
+
+    # De gekozen partitie is altijd het meest rechtse element in de array
+    laatste_element = lijst[eind_index]
 
     for huidig in range(start_index, eind_index):
 
@@ -24,7 +27,7 @@ def partitie(lijst, start_index, eind_index):
 '''
 QuickSort algoritme
 '''
-def quickSort(lijst, start_index=0, eind_index=0):
+def quickSort(lijst, start_index, eind_index):
     if len(lijst) == 1:
         return lijst
 
@@ -34,4 +37,3 @@ def quickSort(lijst, start_index=0, eind_index=0):
         # Sorteer de elementen voor en na de partitie apart
         quickSort(lijst, start_index, partitie_index - 1)
         quickSort(lijst, partitie_index + 1, eind_index)
-
